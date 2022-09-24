@@ -50,6 +50,8 @@ android {
 dependencies {
     implementation ("androidx.lifecycle:lifecycle-viewmodel:2.5.1")
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
+   // implementation("androidx.navigation:navigation-runtime-ktx:2.5.2")
+
     implementation(Compose.compiler)
     implementation(Compose.ui)
     implementation(Compose.uiToolingPreview)
@@ -64,7 +66,7 @@ dependencies {
     kapt(DaggerHilt.hiltCompiler)
 
     implementation(project(Modules.core))
-    //  implementation(project(Modules.coreUi))
+    implementation(project(Modules.coreUi))
     implementation(project(Modules.onboardingPresentation))
     implementation(project(Modules.onboardingDomain))
     implementation(project(Modules.trackerPresentation))
