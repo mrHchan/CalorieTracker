@@ -3,6 +3,13 @@ pluginManagement {
         gradlePluginPortal()
         google()
         mavenCentral()
+        resolutionStrategy {
+            eachPlugin {
+                if( requested.id.id == 'dagger.hilt.android.plugin') {
+                    useModule("com.google.dagger:hilt-android-gradle-plugin:2.43")
+                }
+            }
+        }
     }
 }
 dependencyResolutionManagement {
@@ -10,7 +17,17 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        //noinspection JcenterRepositoryObsolete
+        jcenter()
     }
 }
 rootProject.name = "CalorieTracker"
 include ':app'
+include ':core'
+include ':onboarding'
+include ':onboarding:onboarding_presentation'
+include ':onboarding:onboarding_domain'
+include ':tracker'
+include ':tracker:tracker_data'
+include ':tracker:tracker_domain'
+include ':tracker:tracker_presentation'
