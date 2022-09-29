@@ -11,7 +11,7 @@ import androidx.compose.ui.text.style.TextAlign
 import com.core.navigation.Route
 import com.core.util.UiEvent
 import com.core_ui.LocalSpacing
-import com.onboarding_presentation.R
+import com.core.R
 import com.onboarding_presentation.components.ActionButton
 
 @Composable
@@ -34,7 +34,7 @@ fun WelcomeScreen(
         Spacer(modifier = Modifier.height(spacing.spaceMedium))
         ActionButton(
             text = stringResource(id = R.string.next),
-            onClick = { onNavigate(UiEvent.Navigate(Route.AGE)) },
+            onClick = { onNavigate(UiEvent.Navigate(Route.GENDER)) },
             modifier = Modifier.align(Alignment.CenterHorizontally)
         )
 
