@@ -5,6 +5,11 @@
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.198" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.198" />
+        <entry key="core/src/main/res/drawable/ic_breakfast.xml" value="0.2225" />
+        <entry key="core/src/main/res/drawable/ic_burger.xml" value="0.2225" />
+        <entry key="core/src/main/res/drawable/ic_dinner.xml" value="0.2225" />
+        <entry key="core/src/main/res/drawable/ic_lunch.xml" value="0.2225" />
+        <entry key="core/src/main/res/drawable/ic_snack.xml" value="0.2225" />
       </map>
     </option>
   </component>

@@ -4,7 +4,7 @@ import com.tracker_data.local.TrackerDao
 import com.tracker_data.mapper.toTrackableFood
 import com.tracker_data.mapper.toTrackedFood
 import com.tracker_data.mapper.toTrackedFoodEntity
-import com.tracker_data.remote.dto.OpenFoodApi
+import com.tracker_data.remote.OpenFoodApi
 import com.tracker_domain.model.TrackableFood
 import com.tracker_domain.model.TrackedFood
 import com.tracker_domain.repository.TrackerRepository

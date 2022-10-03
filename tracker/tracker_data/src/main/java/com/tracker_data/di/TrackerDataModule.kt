@@ -3,7 +3,7 @@ package com.tracker_data.di
 import android.app.Application
 import androidx.room.Room
 import com.tracker_data.local.TrackerDatabase
-import com.tracker_data.remote.dto.OpenFoodApi
+import com.tracker_data.remote.OpenFoodApi
 import com.tracker_data.repository.TrackerRepositoryImpl
 import com.tracker_domain.repository.TrackerRepository
 import dagger.Module

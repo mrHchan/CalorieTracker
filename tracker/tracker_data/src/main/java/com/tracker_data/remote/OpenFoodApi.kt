@@ -1,5 +1,6 @@
-package com.tracker_data.remote.dto
+package com.tracker_data.remote
 
+import com.tracker_data.remote.dto.SearchDto
 import retrofit2.http.GET
 import retrofit2.http.Query
 
