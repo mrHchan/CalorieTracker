@@ -52,7 +52,7 @@ class TrackerOverviewViewModel @Inject constructor(
                     )
                 }
             }
-            is TrackerOverviewEvent.OnDeleteTrackedFood -> {
+            is TrackerOverviewEvent.OnDeleteTrackedFoodClick -> {
                 viewModelScope.launch {
                     trackerUseCases.deleteTrackedFood(event.trackedFood)
                     refreshFood()
