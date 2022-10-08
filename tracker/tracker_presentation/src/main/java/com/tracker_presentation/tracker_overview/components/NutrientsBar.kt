@@ -55,7 +55,7 @@ fun NutrientsBar(
             val fatWidth = fatWidthRatio.value * size.width
             drawRoundRect(
                 color = background,
-                size =size,
+                size = size,
                 cornerRadius = CornerRadius(100f)
             )
             drawRoundRect(
