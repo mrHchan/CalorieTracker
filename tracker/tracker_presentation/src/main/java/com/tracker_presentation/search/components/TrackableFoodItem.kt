@@ -24,6 +24,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.LastBaseline
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
@@ -31,7 +32,9 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.annotation.ExperimentalCoilApi
+import coil.compose.rememberAsyncImagePainter
 import coil.compose.rememberImagePainter
+import coil.request.ImageRequest
 import com.core.R
 import com.core_ui.LocalSpacing
 import com.tracker_presentation.search.TrackableFoodUiState
@@ -63,19 +66,19 @@ fun TrackableFoodItem(
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
+            verticalAlignment = CenterVertically
         ) {
             Row(
                 modifier = Modifier.weight(1f)
             ) {
                 Image(
-                    painter = rememberImagePainter(
-                        data = food.imageUrl,
-                        builder = {
-                            crossfade(true)
-                            error(R.drawable.ic_burger)
-                            fallback(R.drawable.ic_burger)
-                        }
+                    painter = rememberAsyncImagePainter(
+                        ImageRequest.Builder(LocalContext.current).data(data = food.imageUrl)
+                            .apply(block = fun ImageRequest.Builder.() {
+                                crossfade(true)
+                                error(R.drawable.ic_burger)
+                                fallback(R.drawable.ic_burger)
+                            }).build()
                     ),
                     contentDescription = food.name,
                     contentScale = ContentScale.Crop,
@@ -138,7 +141,7 @@ fun TrackableFoodItem(
                     .fillMaxWidth()
                     .padding(spacing.spaceMedium),
                 horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
+                verticalAlignment = CenterVertically
             ) {
                 Row {
                     BasicTextField(
